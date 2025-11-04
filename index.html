@@ -58,13 +58,22 @@
       z-index: -99;
     }
 
+    /* Centered column for header + subheader + Yordy */
+    #center-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Adjust this if you want everything higher or lower */
+      padding-top: 20px;
+    }
+
     /* Header image */
     #mainheader {
       width: 300px;
       height: 100px;
-      position: relative;
-      margin: 0 auto;
-      top: -10px;
       background: url(images/mainheader.png) no-repeat center;
       background-size: contain;
     }
@@ -73,47 +82,31 @@
     #subheader {
       width: 350px;
       height: 600px;
-      position: relative;
-      margin: 0 auto;
-      top: -10px;
       background: url(images/subheader.png) no-repeat center;
       background-size: contain;
+      margin-top: -10px;
     }
 
     /* YORDY GIF directly under subheader */
     #yordy-container {
+      margin-top: -40px;           /* closer to subheader */
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: -250px; /* close to subheader */
       animation: fadeIn 1.5s ease-in-out;
-      width: 100%;
     }
 
     #yordy-link {
-      width: 260px;
+      width: 280px;                /* bigger base size */
       height: auto;
       cursor: pointer;
-      padding: 25px;
       display: block;
       transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     }
 
     #yordy-link:hover {
-      transform: scale(1.2);
-      filter: brightness(1.1);
-    }
-
-    /* Fade-in animation */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      transform: scale(1.2);       /* ~20% bigger on hover */
+      filter: brightness(1.1);     /* subtle fade/brighten */
     }
 
     /* Social icons bottom center */
@@ -149,6 +142,18 @@
       0% { background-position: 0 0; }
       100% { background-position: 50px 50px; }
     }
+
+    /* Fade-in for Yordy */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 
   <!-- JavaScript -->
@@ -167,14 +172,16 @@
   <div id="bgdiv1"></div>
   <div id="bgdiv2"></div>
 
-  <!-- Main header and subheader -->
-  <div id="mainheader"></div>
-  <div id="subheader"></div>
+  <!-- Centered stack: header, subheader, Yordy -->
+  <div id="center-wrap">
+    <div id="mainheader"></div>
+    <div id="subheader"></div>
 
-  <!-- YORDY redirect GIF -->
-  <a href="https://www.yordy.co/" target="_blank" id="yordy-container">
-    <img id="yordy-link" src="https://i.imgur.com/5rH3dCJ.gif" alt="Yordy Logo">
-  </a>
+    <!-- YORDY redirect GIF -->
+    <a href="https://www.yordy.co/" target="_blank" id="yordy-container">
+      <img id="yordy-link" src="https://i.imgur.com/5rH3dCJ.gif" alt="Yordy Logo">
+    </a>
+  </div>
 
   <!-- Social icons -->
   <div class="social">
