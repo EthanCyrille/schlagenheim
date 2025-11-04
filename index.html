@@ -85,24 +85,26 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: -250px; /* pulls it closer to subheader */
+      margin-top: -250px; /* close to subheader */
       animation: fadeIn 1.5s ease-in-out;
-      width: 100%; /* ensures full clickable width */
+      width: 100%;
     }
 
     #yordy-link {
-      width: 260px; /* slightly bigger */
+      width: 260px;
       height: auto;
       cursor: pointer;
-      padding: 20px; /* increases clickable area */
-      transition: transform 0.3s ease-in-out;
+      padding: 25px;
+      display: block;
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     }
 
     #yordy-link:hover {
       transform: scale(1.2);
+      filter: brightness(1.1);
     }
 
-    /* Fade-in animation keyframes */
+    /* Fade-in animation */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -123,7 +125,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 25px; /* space between icons */
+      gap: 25px;
     }
 
     .social img {
@@ -186,6 +188,5 @@
       <img src="images/X-Icon.png" alt="X Icon">
     </a>
   </div>
-
 </body>
 </html>
