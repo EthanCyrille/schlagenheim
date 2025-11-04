@@ -69,10 +69,10 @@
       background-size: contain;
     }
 
-    /* Under Construction */
+    /* Under Construction image */
     #subheader {
       width: 350px;
-      height: 400px;
+      height: 600px;
       position: relative;
       margin: 0 auto;
       top: -10px;
@@ -80,26 +80,23 @@
       background-size: contain;
     }
 
-    /* YORDY GIF — closer to subheader */
+    /* YORDY GIF directly under subheader */
     #yordy-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: -150px; /* closer to subheader */
-      text-decoration: none;
-      position: relative;
+      margin-top: -120px; /* pulls it closer to subheader */
     }
 
     #yordy-link {
-      width: 300px; /* larger for easier clicking */
+      width: 240px; /* bigger and easier to click */
       height: auto;
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
-      display: block; /* ensures full clickable area */
     }
 
     #yordy-link:hover {
-      transform: scale(1.3);
+      transform: scale(1.2); /* smooth 20% enlargement on hover */
     }
 
     /* Social icons bottom center */
@@ -111,7 +108,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 25px;
+      gap: 25px; /* space between icons */
     }
 
     .social img {
@@ -148,15 +145,18 @@
 </head>
 
 <body>
+  <!-- Background layers -->
   <div id="bgdiv"></div>
   <div id="bgdiv1"></div>
   <div id="bgdiv2"></div>
+
+  <!-- Main header and subheader -->
   <div id="mainheader"></div>
   <div id="subheader"></div>
 
   <!-- YORDY redirect GIF -->
   <a href="https://www.yordy.co/" target="_blank" id="yordy-container">
-    <img id="yordy-link" src="images/Yordy-Logo-Turnabout.gif" alt="Yordy Logo">
+    <img id="yordy-link" src="https://i.imgur.com/5rH3dCJ.gif" alt="Yordy Logo">
   </a>
 
   <!-- Social icons -->
