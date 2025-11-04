@@ -85,7 +85,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: -220px; /* pulls it closer to subheader */
+      margin-top: -250px; /* pulls it closer to subheader */
+      animation: fadeIn 1.5s ease-in-out; /* smooth fade on load */
     }
 
     #yordy-link {
@@ -97,6 +98,18 @@
 
     #yordy-link:hover {
       transform: scale(1.2); /* smooth 20% enlargement on hover */
+    }
+
+    /* Fade-in animation keyframes */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Social icons bottom center */
